@@ -7,6 +7,10 @@ public class HotDrink {
         this.name = name;
         this.volume = volume;
     }
+    public HotDrink(String name, int volume, int t){
+        this(name,volume);
+        this.t = t;
+    }
 
     public String getName() {
         return name;

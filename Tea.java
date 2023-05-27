@@ -4,4 +4,7 @@ public class Tea extends HotDrink{
     public Tea(String name, int volume) {
         super(name, volume);
     }
+    public Tea(String name, int volume, int t) {
+        super(name, volume, t);
+    }
 }

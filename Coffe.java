@@ -3,4 +3,7 @@ public class Coffe extends HotDrink{
     public Coffe(String name, int volume) {
         super(name, volume);
     }
+    public Coffe(String name, int volume, int t) {
+        super(name, volume, t);
+    }
 }
