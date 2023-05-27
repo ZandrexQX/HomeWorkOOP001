@@ -17,16 +17,34 @@ public class HotDrinkMachine implements VendingMachine {
 
     @Override
     public ArrayList<HotDrink> getProduct(String name) {
-        return VendingMachine.super.getProduct(name);
+        ArrayList<HotDrink> outDrink = new ArrayList<>();
+        for (HotDrink hd: listDrink) {
+            if (hd.getName()==name){
+                outDrink.add(hd);
+            }
+        }
+        return outDrink;
     }
 
     @Override
     public ArrayList<HotDrink> getProduct(String name, int volume) {
-        return VendingMachine.super.getProduct(name, volume);
+        ArrayList<HotDrink> outDrink = new ArrayList<>();
+        for (HotDrink hd: listDrink) {
+            if (hd.getName()==name && hd.getVolume()==volume){
+                outDrink.add(hd);
+            }
+        }
+        return outDrink;
     }
 
     @Override
     public ArrayList<HotDrink> getProduct(String name, int volume, int t) {
-        return VendingMachine.super.getProduct(name, volume, t);
+        ArrayList<HotDrink> outDrink = new ArrayList<>();
+        for (HotDrink hd: listDrink) {
+            if (hd.getName()==name && hd.getVolume()==volume && hd.getT() == t){
+                outDrink.add(hd);
+            }
+        }
+        return outDrink;
     }
 }

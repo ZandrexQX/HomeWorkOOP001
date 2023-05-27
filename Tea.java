@@ -7,4 +7,9 @@ public class Tea extends HotDrink{
     public Tea(String name, int volume, int t) {
         super(name, volume, t);
     }
+
+    @Override
+    public String toString() {
+        return "Tea" + super.toString();
+    }
 }

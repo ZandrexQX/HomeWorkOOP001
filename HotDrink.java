@@ -21,4 +21,11 @@ public class HotDrink {
     public int getT() {
         return t;
     }
+
+    @Override
+    public String toString() {
+        return "\nName: " + name +
+                "\nVolume: " + volume +
+                "\nt: " + t;
+    }
 }
