@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 
 public interface VendingMachine {
-    ArrayList<HotDrink> listDrink = null;
     default ArrayList<HotDrink> getProduct(String name) {
         return null;
     }
