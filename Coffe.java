@@ -1,10 +1,10 @@
 public class Coffe extends HotDrink{
-    private int t = 80;
-    public Coffe(String name, int volume) {
-        super(name, volume);
+    private int temperature = 80;
+    public Coffe(String name, int volume, long price) {
+        super(name, volume, price);
     }
-    public Coffe(String name, int volume, int t) {
-        super(name, volume, t);
+    public Coffe(String name, int volume, long price, int temperature) {
+        super(name, volume, price, temperature);
     }
 
     @Override

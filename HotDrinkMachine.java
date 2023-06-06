@@ -15,6 +15,11 @@ public class HotDrinkMachine implements VendingMachine {
         this.listDrink = listDrink;
     }
 
+    public ArrayList<HotDrink> sortPriceDrink() {
+        listDrink.sort(new PriceComparator());
+        return listDrink;
+    }
+
     @Override
     public ArrayList<HotDrink> getProduct(String name) {
         ArrayList<HotDrink> outDrink = new ArrayList<>();
@@ -38,10 +43,10 @@ public class HotDrinkMachine implements VendingMachine {
     }
 
     @Override
-    public ArrayList<HotDrink> getProduct(String name, int volume, int t) {
+    public ArrayList<HotDrink> getProduct(String name, int volume, int temperature) {
         ArrayList<HotDrink> outDrink = new ArrayList<>();
         for (HotDrink hd: listDrink) {
-            if (hd.getName()==name && hd.getVolume()==volume && hd.getT() == t){
+            if (hd.getName()==name && hd.getVolume()==volume && hd.getTemperature() == temperature){
                 outDrink.add(hd);
             }
         }

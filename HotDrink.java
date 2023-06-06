@@ -1,15 +1,18 @@
-public class HotDrink {
-    private int t = 50;
+public class HotDrink implements Comparable <HotDrink> {
+    private int temperature = 50;
     private int volume;
     private String name;
 
-    public HotDrink(String name, int volume){
+    private long price;
+
+    public HotDrink(String name, int volume, long price){
         this.name = name;
         this.volume = volume;
+        this.price = price;
     }
-    public HotDrink(String name, int volume, int t){
-        this(name,volume);
-        this.t = t;
+    public HotDrink(String name, int volume,long price, int temperature){
+        this(name,volume, price);
+        this.temperature = temperature;
     }
 
     public String getName() {
@@ -18,14 +21,28 @@ public class HotDrink {
     public int getVolume() {
         return volume;
     }
-    public int getT() {
-        return t;
+    public int getTemperature() {
+        return temperature;
+    }
+
+    public long getPrice() {
+        return price;
     }
 
     @Override
     public String toString() {
         return "\nName: " + name +
                 "\nVolume: " + volume +
-                "\nt: " + t;
+                "\ntemperature: " + temperature +
+                "\nprice: " + price;
+    }
+    @Override
+    public int compareTo(HotDrink o) {
+        if (this.price > o.price)
+            return 1;
+        else if (this.price < o.price)
+            return -1;
+        else
+            return 0;
     }
 }
